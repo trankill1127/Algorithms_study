@@ -1,0 +1,31 @@
+﻿  1.cpp
+  10.cpp
+  11.cpp
+  12.cpp
+  13.cpp
+c:\users\lg\personalprojects\inflearn_algorithms\13.cpp(13): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\lg\personalprojects\inflearn_algorithms\13.cpp(14): error C2664: 'int atoi(const char *)': 인수 1을(를) 'char'에서 'const char *'(으)로 변환할 수 없습니다.
+  c:\users\lg\personalprojects\inflearn_algorithms\13.cpp(14): note: 정수 계열 형식에서 포인터 형식으로 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+  14.cpp
+  15.cpp
+  16.cpp
+  17.cpp
+c:\users\lg\personalprojects\inflearn_algorithms\17.cpp(10): warning C4091: 'typedef ': 변수를 선언하지 않으면 'student' 왼쪽은 무시됩니다.
+  19.cpp
+  2.cpp
+  20.cpp
+  21.cpp
+  22.cpp
+  23.cpp
+  3.cpp
+  4.cpp
+  5.cpp
+  6.cpp
+c:\users\lg\personalprojects\inflearn_algorithms\6.cpp(15): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  7.cpp
+c:\users\lg\personalprojects\inflearn_algorithms\7.cpp(14): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  컴파일하고 있습니다...
+  8.cpp
+c:\users\lg\personalprojects\inflearn_algorithms\8.cpp(16): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  9.cpp
+  18.cpp
