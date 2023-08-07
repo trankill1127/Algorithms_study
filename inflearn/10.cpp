@@ -1,43 +1,49 @@
-//10. ÀÚ¸´¼öÀÇ ÇÕ
-
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
-int digit_sum(int x);
-
-int main() {
-	int N;
-	cin >> N;
+int digit_sum(int x){
+	int sum=0;
 	
-	int* nums = new int[N];
-	int* num_sum = new int[N];
-	for (int i = 0; i < N; i++) { //O(N)
-		cin >> nums[i];
-		num_sum[i] = digit_sum(nums[i]);
+	while (x>0){
+		sum += (x%10);
+		x/=10;	
 	}
-
-	int maxsum_idx=0;
-	for (int i = 1; i < N; i++) { //O(N-1)=O(N)
-		if (num_sum[maxsum_idx] < num_sum[i]) maxsum_idx = i;
-		else if (num_sum[maxsum_idx] == num_sum[i]) {
-			if (nums[maxsum_idx] < nums[i]) maxsum_idx = i;
-		}
-		else;
-	}
-
-	cout << nums[maxsum_idx];
-
-	return 0;
+	
+	return sum;
 }
 
-int digit_sum(int x) {
-	int sum = 0;
-	
-	while (x > 0) {
-		sum += (x % 10);
-		x /= 10;
-	}
 
-	return sum;
+int main() {
+	
+	int n;
+	cin>>n;
+	
+	vector<int> number;
+	int tmp;
+	for (int i=0; i<n; i++){
+		cin>>tmp;
+		number.push_back(tmp);
+	}
+	
+	int max=0;
+	int maxSum=0;
+	for (int i=0; i<n; i++){
+		tmp=digit_sum(number[i]);
+		
+		if (maxSum<tmp){
+			maxSum=tmp;
+			max=i;
+		}
+		else if (maxSum==tmp){
+			if (number[max]<number[i]){
+				max=i;
+			}
+		}
+	}
+	
+	cout<<number[max];
+	
+	return 0;
 }

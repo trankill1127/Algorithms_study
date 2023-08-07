@@ -1,20 +1,24 @@
-//2. 자연수의 합
-
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main() {
-	int A, B;
 
-	cin>>A>>B;
+	int a, b;
+	cin >> a >> b;
 
-	int sum = 0;
-	for (int i = A; i <= B; i++) { //O(B-A+1)
-		if (i!=B) cout << i << " +"; //자동 개행 X
-		else cout << i << " = ";
-		sum += i;
+	int total = 0;
+	for (int i = a; i < b + 1; i++) {
+		cout << i;
+		total += i;
+		if (i < b) {
+			cout << " +";
+		}
+		else {
+			cout << " = ";
+		}
 	}
 
-	cout<<sum;
+	cout << total;
+
 	return 0;
 }

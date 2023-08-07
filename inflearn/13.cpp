@@ -1,24 +1,33 @@
-//13. 가장 많이 사용된 자릿수
-
 #include<iostream>
-#include<string>
+#include<string> 
+#include<map>
 
 using namespace std;
 
 int main() {
-	string N;
-	cin >> N;
-
-	int cnt[10] = { 0 };
-	for (int i = 0; i < N.length(); i++) { //O(len)
-		cnt[atoi(N[i])]++;
+	
+	string n;
+	cin>>n;
+	
+	map<int, int> cnt;
+	
+	for (int i=0; i<n.length(); i++){
+		cnt[n[i]-'0']++;
 	}
-
-	int max = 0;
-	for (int i = 1; i < 10; i++) { //O(10)
-		if (cnt[max] <= cnt[i]) max = i;
+	
+	auto maxIter=cnt.begin();
+	for (auto i=cnt.begin(); i!=cnt.end(); i++){
+		
+		if (i->second > maxIter->second) maxIter=i;
+		
+		else if (i->second == maxIter->second) {
+			if  ( i->first > maxIter->first ) maxIter=i; 
+		} 
+		
 	}
-
-	cout << max;
+	
+	cout<<maxIter->first;
+	
 	return 0;
 }
+
